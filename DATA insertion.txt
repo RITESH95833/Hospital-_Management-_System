@@ -1,0 +1,70 @@
+ DATA Insertion in Table.
+
+ INSERT INTO Patient(email,password,name,address,gender)
+ VALUES('biswal@gmail.com','biswal123','Ajay biswal','odisha 756047','male');
+ INSERT INTO Patient(email,password,name,address,gender)
+values('nayak@gmail.com','nayak345','Parbati Nayak','odisha balasore','male');
+ INSERT INTO Patient(email,password,name,address,gender)
+ values('suresh12@gmail.com','suresh@12',Suresh Mohanty','bhubaneshwar'odisha,'male');
+
+
+ INSERT INTO Medicalhistory(id,dt,conditions,surgeries,medication)
+VALUES(1,'12-feb-23','Chest pain','Heart surgery','Anthracite');
+ INSERT INTO Medicalhistory(id,dt,conditions,surgeries,medication)
+ VALUES(2,'23-mar-2023','Headache','None','saridon');
+ INSERT INTO Medicalhistory(id,dt,conditions,surgeries,medication)
+ values(3,'18-apr-23','Accute abdomen','Kidney surgery','Rl salaine');
+
+
+ INSERT INTO DOCTOR(EMAIL,PASSWORD,NAME,GENDER)
+VALUES('jayant12@gmail.com','jayant12','Jayanta Jena','male');
+ INSERT INTO DOCTOR(EMAIL,PASSWORD,NAME,GENDER)
+ VALUES('ukjena@gmail.com','jena@123','Utam kumar Jena','male');
+ INSERT INTO DOCTOR(EMAIL,PASSWORD,NAME,GENDER)
+values('rout@gmail.com','routk1','KK Rout','male');
+
+
+ INSERT INTO Appointment(id,dt,starttime,endtime,status)
+ values(1,'12-JAN-23','12.05PM','1.05PM','COMPLETED');
+ INSERT INTO Appointment(id,dt,starttime,endtime,status)
+values(2,'23-DEC-22','10.30AM','11.30AM','COMPLETED');
+ INSERT INTO Appointment(id,dt,starttime,endtime,status)
+ values(3,'11-NOV-23','11.00AM','12.00PM','COMPLETED');
+
+
+ INSERT INTO PatientsAttendAppointments(patient,appt,concerns,symptoms)
+VALUES('biswal@gmail.com',1,'Anthracite','THYROID');
+ INSERT INTO PatientsAttendAppointments(patient,appt,concerns,symptoms)
+  VALUES('nayak@gmail.com',2,'VOOMITING','FEVER');
+ INSERT INTO PatientsAttendAppointments(patient,appt,concerns,symptoms)
+VALUES('suresh12@gmail.com',3,'NONE','CHEST PAIN');
+
+
+ INSERT INTO Schedule(id,starttime,endtime,breaktime,day)
+ VALUES(002,'9.00 am','2.00am','12.00pm','monday');
+ INSERT INTO Schedule(id,starttime,endtime,breaktime,day)
+values(002,'9.00am','2.00am','12.00pm','tuesday');
+ INSERT INTO Schedule(id,starttime,endtime,breaktime,day)
+ values(002,'9.00am','2.00pm','12.00pm','wednesday');
+ INSERT INTO Schedule(id,starttime,endtime,breaktime,day)
+  values(002,'9.00am','2.00pm','12.00pm','thursday');
+ INSERT INTO Schedule(id,starttime,endtime,breaktime,day)
+ values(002,'9.00am','2.00pm','12.00pm','friday');
+ INSERT INTO Schedule(id,starttime,endtime,breaktime,day)
+values(002,'9.00am','2.00pm','12.00pm','saturday');
+
+
+ INSERT INTO Diagnose(appt,doctor,diagnosis,prescription)
+VALUES(1,'jayant12@gmail.com','iron deficiency','iron tab');
+ INSERT INTO Diagnose(appt,doctor,diagnosis,prescription)
+values(2,'ukjena@gmail.com','fever','paracetamol');
+ INSERT INTO Diagnose(appt,doctor,diagnosis,prescription)
+values(3,'rout@gmail.com','gastric','pantoprazole');
+
+
+ INSERT INTO DoctorViewsHistory(history,doctor)
+ values(1,'jayanta jena');
+ INSERT INTO DoctorViewsHistory(history,doctor)
+ values(2,'Utam kumar Jena');
+ INSERT INTO DoctorViewsHistory(history,doctor)
+values(3,'KK Rout');

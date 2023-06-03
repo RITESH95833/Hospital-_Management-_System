@@ -1,0 +1,68 @@
+CREATING A HOSPITAL MANAGEMENT SYSTEM
+  TABLE CREATION BY USING DDL COMMAND SQL.
+
+CREATE TABLE Patient(
+ email varchar(50) PRIMARY KEY,
+ password varchar(30) NOT NULL,
+ name varchar(50) NOT NULL,
+ address varchar(60) NOT NULL,
+ gender VARCHAR(20) NOT NULL
+ );
+ 
+  CREATE TABLE MedicalHistory(
+ id int PRIMARY KEY,
+  dt DATE,
+  conditions VARCHAR(100) NOT NULL,
+  surgeries VARCHAR(100) NOT NULL, 
+  medication VARCHAR(100) NOT NULL
+  );
+
+CREATE TABLE Doctor
+( email varchar(50) PRIMARY KEY,
+ password varchar(30) NOT NULL, name varchar(50) NOT NULL,
+ gender varchar(20) NOT NULL);
+
+ CREATE TABLE Appointment(
+ id int PRIMARY KEY,
+ dt date, starttime VARCHAR(20) NOT NULL,
+ endtime VARCHAR(20)  NOT NULL,
+ status varchar(15) NOT NULL
+ );
+
+ CREATE TABLE PatientsAttendAppointments(
+ patient varchar(50) NOT NULL,
+ appt int NOT NULL,
+ concerns varchar(40) NOT NULL,
+ symptoms varchar(40) NOT NULL,
+ email REFERENCES  Patient (email),
+ id REFERENCES Appointment (id),
+ PRIMARY KEY (patient, appt)
+ );
+
+ CREATE TABLE Schedule(
+ id int NOT NULL,
+ starttime VARCHAR(20) NOT NULL,
+ endtime VARCHAR(20) NOT NULL,
+ breaktime VARCHAR(20) NOT NULL,
+ day varchar(20) NOT NULL,
+ PRIMARY KEY (id, starttime, endtime, breaktime, day)
+ );
+
+ CREATE TABLE Diagnose(
+appt int NOT NULL,
+doctor varchar(50) NOT NULL,
+diagnosis varchar(40) NOT NULL,
+prescription varchar(50) NOT NUL
+id REFERENCES Appointment (id),
+email REFERENCES Doctor (email),
+PRIMARY KEY (appt, doctor)
+);
+
+CREATE TABLE DoctorViewsHistory(
+history int NOT NULL,
+doctor varchar(50) NOT NULL,
+email REFERENCES Doctor (email),
+PRIMARY KEY (history, doctor)
+);
+
+
